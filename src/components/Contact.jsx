@@ -9,12 +9,16 @@ function Contact({ submitted }) {
     console.log("Submitted");
 
     return (
-      <h1>Test</h1>
+      <div id="contactSection">
+        <h1>{name}</h1>
+        <p>{email}</p>
+        <p>{phoneNumber}</p>
+      </div>
     );
   }
 
   return (
-    <>
+    <div id="contactSection">
       <form>
         <legend>Contact Details</legend>
 
@@ -42,10 +46,12 @@ function Contact({ submitted }) {
           id="phone"
           name="phone"
           value={phoneNumber}
-          onChange={(event) => setPhoneNumber(event.target.value.replace(/[^0-9]/g, ""))}
+          onChange={(event) =>
+            setPhoneNumber(event.target.value.replace(/[^0-9]/g, ""))
+          }
         />
       </form>
-    </>
+    </div>
   );
 }
 
