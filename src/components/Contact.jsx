@@ -1,12 +1,16 @@
 import { useState } from "react";
 
-function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+function Contact({ submitted }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState();
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   if (submitted) {
+    console.log("Submitted");
+
+    return (
+      <h1>Test</h1>
+    );
   }
 
   return (
@@ -30,6 +34,15 @@ function Contact() {
           name="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
+        />
+
+        <label htmlFor="email">Phone Number: </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={phoneNumber}
+          onChange={(event) => setPhoneNumber(event.target.value.replace(/[^0-9]/g, ""))}
         />
       </form>
     </>
