@@ -6,8 +6,6 @@ function Contact({ submitted }) {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   if (submitted) {
-    console.log("Submitted");
-
     return (
       <div id="contactSection">
         <h1>{name}</h1>

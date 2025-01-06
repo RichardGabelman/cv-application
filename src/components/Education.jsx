@@ -6,8 +6,6 @@ function Education({ submitted }) {
   const [date, setDate] = useState("");
 
   if (submitted) {
-    console.log("Submitted");
-
     return (
       <div id="educationSection">
         <h2>{school}</h2>
@@ -20,7 +18,7 @@ function Education({ submitted }) {
   return (
     <div id="educationSection">
       <form>
-        <legend>Education</legend>
+        <legend>Education Details</legend>
 
         <label htmlFor="school">School: </label>
         <input

@@ -20,12 +20,12 @@ function App() {
   // TODO: education info
   // TODO: practical info
   return (
-    <>
+    <div id="main">
       <Contact submitted={submitted} />
       <Education submitted={submitted} />
       <Practical submitted={submitted} />
       <button type="button" onClick={handleClick}>{buttonText}</button>
-    </>
+    </div>
   );
 }
 
